@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="PHP">
+  <template name="itShould" value="public function itShould$DO_SOMETHING$()&#10;{&#10;    $END$&#10;    $this-&gt;assertThat();&#10;}" description="testcase" toReformat="true" toShortenFQNames="true">
+    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($CONDITION$) {&#10;    $END$&#10;}" description="if clause" toReformat="true" toShortenFQNames="true">
+    <variable name="CONDITION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="switch" value="switch ($VAR$) {&#10;    case $CASE_1$:&#10;        $END$&#10;        break;&#10;    default:&#10;        break;&#10;}" description="switch" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CASE_1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="set" value="public function set$VAR_NAME$($VAR_VALUE$)&#10;{&#10;    $this-&gt;$VAR_NAME_DECAPITALIZED$ = $VAR_VALUE$;$END$&#10;}" description="setter" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME_DECAPITALIZED" expression="decapitalize(VAR_NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="get" value="public function get$VAR_NAME$()&#10;{&#10;    return $this-&gt;$VAR_NAME_DECAPITALIZED$;$END$&#10;}" description="getter" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_NAME_DECAPITALIZED" expression="decapitalize(VAR_NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
+
